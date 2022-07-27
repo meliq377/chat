@@ -3,7 +3,8 @@ from room.views import *
 
 
 urlpatterns = [
-    path('rooms/', room, name='rooms'),
+    path('rooms/', rooms, name='rooms'),
+    path('rooms/<str:slug>/', room, name='room'),
 
 
 ]
