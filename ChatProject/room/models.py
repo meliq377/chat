@@ -21,9 +21,9 @@ class Message(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return str(self.room)
+        return str(self.room) + '->' + str(self.user)
 
     class Meta:
         verbose_name = 'message'
         verbose_name_plural = 'messages'
-        ordering = ('date_added',)
+        ordering = ('room',)
